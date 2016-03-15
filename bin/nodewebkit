@@ -29,9 +29,9 @@ function run() {
 
   // Spawn node-webkit
   var nw = spawn(bin, args, { stdio: 'inherit' });
-  nw.on('close', function() {
+  nw.on('close', function(code) {
     process.nextTick(function() {
-      process.exit(0);
+      process.exit(code);
     });
   });
 
