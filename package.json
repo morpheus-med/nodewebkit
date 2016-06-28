@@ -11,7 +11,7 @@
     "nodewebkit": "bin/nodewebkit"
   },
   "scripts": {
-    "postinstall": "node scripts/install.js",
+    "postinstall": "bash scripts/install.js",
     "test": "node test/index.js"
   },
   "files": [
