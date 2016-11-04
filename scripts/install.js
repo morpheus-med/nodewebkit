@@ -6,7 +6,7 @@ filename=$build.tar.gz
 cachefile=~/.npm/nodewebkit/$filename
 
 if [ "$(sha1sum $cachefile)" != "841966df76536d053d28bd93ab50896053fedbdf  $cachefile" ]; then
-    wget --output-document=$cachefile http://dl.node-webkit.org/$version/$filename 
+    wget --output-document=$cachefile https://s3-us-west-2.amazonaws.com/morpheus-repository/$filename 
 fi
 
 rm -rf nodewebkit
